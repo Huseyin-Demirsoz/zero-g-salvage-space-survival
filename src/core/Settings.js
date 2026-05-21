@@ -3,6 +3,7 @@ import GUI from 'lil-gui';
 export function createSettings() {
   const settings = {
     flashlightBrightness: 4.8,
+    grabdistance: 4.2,
     selfFriction: true,
     selfFrictionStrength: 0.986,
     playerSelfFriction: true,
@@ -24,6 +25,7 @@ export function createSettings() {
 
   const gui = new GUI({ title: 'Zero-G Debug Settings' });
   gui.add(settings, 'flashlightBrightness', 0, 10, 0.1).name('Flashlight Brightness');
+  gui.add(settings, 'grabdistance', 1, 10, 0.1).name('Grab Distance');
   gui.add(settings, 'selfFriction').name('Item Self Friction');
   gui.add(settings, 'selfFrictionStrength', 0.90, 1.0, 0.001).name('Item Friction Strength');
   gui.add(settings, 'playerSelfFriction').name('Player Self Friction');

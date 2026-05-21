@@ -2,11 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <style src ="src/ui/hud.css"></style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zero-G Salvage: Space Survival</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <script type="importmap">
+{
+  "imports": {
+    "three": "/lib/three/three.module.js",
+    "GLTFLoader": "/lib/three/addons/loaders/GLTFLoader.js",
+    "cannon-es": "/lib/cannon/cannon-es.js",
+    "lil-gui": "/lib/lil-gui.esm.js"
+  }
+}
+</script>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="sidebysidefacilitator">
+    <div id="app" style ="float: left;"></div>
     <script type="module" src="/src/main.js"></script>
+    </div>
   </body>
 </html>

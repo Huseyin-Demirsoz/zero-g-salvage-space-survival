@@ -98,7 +98,7 @@ export class Game {
         const dropped = this.player.dropHeldItem();
         this.hud.showFeedback(`Dropped ${dropped.label}`);
       } else {
-        const nearest = this.itemManager.findNearestItem(this.camera.position, 3.4);
+        const nearest = this.itemManager.findNearestItem(this.camera.position);
         if (nearest) {
           this.player.setHeldItem(nearest);
           this.hud.showFeedback(`Holding ${nearest.label}`);

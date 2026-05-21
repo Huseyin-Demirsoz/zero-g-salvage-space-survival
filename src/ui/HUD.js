@@ -19,9 +19,10 @@ export class HUD {
     this.player = null;
 
     this.root = document.createElement('div');
+    document.getElementById('sidebysidefacilitator').appendChild(this.root);
     this.root.id = 'hud';
     this.root.innerHTML = `
-      <div class="hud-panel hud-left">
+      <div class="hud-panel hud-left" style ="float: left;">
         <h1>ZERO-G SALVAGE</h1>
         ${barHTML('hunger-bar', 'Hunger')}
         ${barHTML('thirst-bar', 'Thirst')}
@@ -53,7 +54,7 @@ export class HUD {
         <strong>Controls</strong><br />
         Click: mouse lock · Mouse: look<br />
         WASD: horizontal/forward thrust<br />
-        E: up · Q: down · Alt: boost<br />
+        X: up · Z: down · Alt: boost<br />
         Space/Left Click: extinguisher backward thrust<br />
         E: grab/drop · Hold/Release Left Click: throw<br />
         C: consume held resource · F: flashlight<br />
